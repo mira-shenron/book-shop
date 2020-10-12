@@ -1,4 +1,4 @@
-var gCurrLang = 'he';
+var gCurrLang = 'en';
 
 var gTrans = {
     welcomeMsg: {

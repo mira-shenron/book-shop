@@ -4,34 +4,52 @@
 
 table{
     border: 1px;
+    border-radius:  5px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);        
 }
 
 th {
     padding: 10px;
-    background-color: #bea2fa99;
+    /* background-color: #005CAB; */
+    background-color: #24749B;
     font-size: 1.5em;
+    color: whitesmoke;
 }
 
 td {
     font-size: 1.2em;
     padding: 10px;
-    background-color: rgba(238, 182, 248, 0.6);
+    background-color: #24749B;
+    color: whitesmoke;
 }
 
 .new-book{
     margin: 15px;
+    padding: 20px;
+    background-color: #24749B;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 5px 5px 0px rgba(0,0,0,0.75);
+    font-family: 'my-font',serif;
 }
 
 .read{
-    background-color: blue;
+    background-color: whitesmoke;
+    color: #005CAB;
 }
 
 .update{
-    background-color: orange;
+    background-color: whitesmoke;
+    color: #005CAB;
 }
 
 .delete{
-    background-color: red;
+    background-color: whitesmoke;
+    color: #005CAB;
 }
 
 .btn{
@@ -45,7 +63,7 @@ h1{
 }
 
 .book-details {
-    background-color: rgb(167, 163, 163);
+    background-color: #24749B;
     display:none;
     position: absolute;
     top: 0px;
@@ -54,6 +72,7 @@ h1{
     min-height: 100%;;
     font-size: large;
     font-weight: bold;
+    color:white;
 }
 
 .book-img-container img {
@@ -82,11 +101,13 @@ h1{
     position: fixed;
     width: 400px;
     height: 350px;
-    background-color: lightgrey;
+    background-color: #24749B;
     padding: 50px;
     text-align: center;
     right: 0;
     top:0;
+    color: white;
+    border-radius: 5px;
 }
 
 .close-add-book, .close-update-book{
@@ -97,7 +118,11 @@ h1{
 }
 
 .lang{
-    padding: 25px;
+    margin: 10px;
+    padding: 8px;
+    font-family: 'my-font';
+    background-color: #24749B;
+    color:white;
 }
 
 h5{
@@ -109,6 +134,43 @@ body.rtl {
     direction: rtl;
 }
 
+.welcome{
+    background-color: #AB5063;
+    width: 100vw;
+    height: 200px;
+}
+
+.bckPic{
+    filter: brightness(0.3);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1; 
+}
+
+/* body > img{
+    filter: brightness(0.4);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1; 
+} */
+
+
+h1{
+    color: white;
+}
+
+body{
+    margin: 0;
+    font-family: 'my-font',serif;
+}
+
+
+@font-face {
+  font-family: my-font;
+  src: url(../font/Rubik-Light.ttf);
+}
 
 
 

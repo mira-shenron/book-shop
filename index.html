@@ -9,15 +9,18 @@
 </head>
 
 <body onload="onInit()">
+    <img src="img/Artboard2.jpg" class="bckPic" alt="">
 
-    <div class="lang">
-        <select onchange="onSetLang(this.value)">
-            <option value="en" >English</option>
-            <option value="he">עברית</option>
-        </select>
-    </div>
-
-    <h1 data-trans="welcomeMsg">Welcome to my bookshop</h1>
+    <section class="welcome">
+        <div>
+            <select class="lang" onchange="onSetLang(this.value)">
+                <option value="en" >English</option>
+                <option value="he">עברית</option>
+            </select>
+        </div>
+        <h1 data-trans="welcomeMsg">Welcome to my bookshop</h1>
+    </section>
+    
 
     <section class="bookshop">
         <button class="btn new-book" data-trans="newBookBtn" onclick="onAddBook()">Create New Book</button>

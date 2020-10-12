@@ -43,6 +43,7 @@ function renderBookDetails(book){
     elBookPrice.innerText = formatCurrency(book.price, gCurrLang);
 
     var elBookImg = document.querySelector('.book-img-container');
+    console.log(elBookImg);
     var strHTML = `<img src="${book.imgUrl}"></img>`;
     elBookImg.innerHTML = strHTML;
 
