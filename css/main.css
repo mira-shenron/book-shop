@@ -3,16 +3,16 @@
 }
 
 table{
-    border: 1px;
     border-radius:  5px;
+    border-collapse: unset;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);        
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);  
+    text-align: center;      
 }
 
 th {
     padding: 10px;
-    /* background-color: #005CAB; */
     background-color: #24749B;
     font-size: 1.5em;
     color: whitesmoke;
@@ -23,6 +23,12 @@ td {
     padding: 10px;
     background-color: #24749B;
     color: whitesmoke;
+}
+
+.btn{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: whitesmoke;
 }
 
 .new-book{
@@ -50,11 +56,6 @@ td {
 .delete{
     background-color: whitesmoke;
     color: #005CAB;
-}
-
-.btn{
-    cursor: pointer;
-    border-radius: 5px;
 }
 
 h1{
@@ -130,7 +131,7 @@ h5{
     margin-bottom: 0;
 }
 
-body.rtl {
+.rtl{
     direction: rtl;
 }
 
@@ -170,6 +171,16 @@ body{
 @font-face {
   font-family: my-font;
   src: url(../font/Rubik-Light.ttf);
+}
+
+.pages-list{
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.title-col, .price-col{
+    cursor: pointer;
 }
 
 

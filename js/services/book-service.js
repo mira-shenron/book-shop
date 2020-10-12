@@ -3,20 +3,21 @@
 const STORAGE_KEY = 'booksDB';
 
 var gBooks = _createBooks();
+var gSortBy = 'NAME'; //default
 
 function _createBooks() {
     var books = loadFromStorage(STORAGE_KEY);
     if (!books) {
         books = [];
-        books.push(_createBook('Learn CSS', '18.90', '../img/cssBookImg.jpg'));
-        books.push(_createBook('Learn Javascript', '10.0', '../img/jsBookImg.png'));
-        books.push(_createBook('Learn HTML', '99.99', '../img/htmlBookImg.jpg'));
+        books.push(_createBook('Learn CSS', '18.90', 'img/cssBookImg.jpg'));
+        books.push(_createBook('Learn Javascript', '10.0', 'img/jsBookImg.png'));
+        books.push(_createBook('Learn HTML', '99.99', 'img/htmlBookImg.jpg'));
         _saveBooks(books);
     }
     return books;
 }
 
-function _createBook(name, price, imgUrl='../img/FalmerBook.png', rating=0) {
+function _createBook(name, price, imgUrl='img/FalmerBook.png', rating=0) {
     return {
         id: makeId(),
         name,
@@ -31,7 +32,7 @@ function _saveBooks(books){
 }
 
 function getBooks(){
-    return gBooks;
+    return sort(gBooks, gSortBy);
 }
 
 function removeBook(bookId){
@@ -65,4 +66,13 @@ function updateRating(bookId, rating){
 function getBookIdx(bookId){    
     var idx = gBooks.findIndex(book => book.id === bookId);
     return idx;
+}
+
+function sort(books,sortBy) { 
+    if (sortBy === 'NAME') return books.sort((a, b) => (a.name > b.name) ? 1 : -1);
+    else return books.sort((a, b) => (a.price-b.price));
+}
+
+function setGSortBy(sortBy){
+    gSortBy = sortBy;
 }

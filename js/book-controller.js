@@ -160,9 +160,25 @@ function changeModalDisplay(modalClass, mode){
 
 function onSetLang(lang) {
     setLang(lang);
-    if (lang === 'he') document.body.classList.add('rtl')
-    else document.body.classList.remove('rtl')
+    if (lang === 'he') document.body.classList.add('rtl');
+    else document.body.classList.remove('rtl');
     
     renderBooks();
     doTrans();
 }
+
+function onTitleClick(){
+    handleSort('NAME');
+}
+
+function onPriceClick(){
+    handleSort('PRICE');
+}
+
+function handleSort(sortBy){
+    setGSortBy(sortBy);
+    renderBooks();
+    doTrans();
+}
+    
+    
