@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+table{
+    border: 1px;
+}
+
+th {
+    padding: 10px;
+    background-color: #bea2fa99;
+    font-size: 1.5em;
+}
+
+td {
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: rgba(238, 182, 248, 0.6);
+}
+
+.new-book{
+    margin: 15px;
+}
+
+.read{
+    background-color: blue;
+}
+
+.update{
+    background-color: orange;
+}
+
+.delete{
+    background-color: red;
+}
+
+.btn{
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.book-details {
+    background-color: rgb(167, 163, 163);
+    display:none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    min-height: 100%;;
+    font-size: large;
+    font-weight: bold;
+}
+
+.book-img-container img {
+    height: 200px;
+    width: 200px;
+}
+
+.close-modal{
+    float:right;
+}
+
+.details{
+    padding: 15px;
+    text-align: center;
+}
+
+.bookshop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-book-modal,.update-book-modal{
+    display:none;
+    position: fixed;
+    width: 400px;
+    height: 350px;
+    background-color: lightgrey;
+    padding: 50px;
+    text-align: center;
+    right: 0;
+    top:0;
+}
+
+.close-add-book, .close-update-book{
+    position: absolute;
+    float:right;
+    top:0px;
+    right:0px;
+}
+
+.lang{
+    padding: 25px;
+}
+
+h5{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+
+
+
+
+

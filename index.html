@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+
+    <div class="lang">
+        <select onchange="onSetLang(this.value)">
+            <option value="en" >English</option>
+            <option value="he">עברית</option>
+        </select>
+    </div>
+
+    <h1 data-trans="welcomeMsg">Welcome to my bookshop</h1>
+
+    <section class="bookshop">
+        <button class="btn new-book" data-trans="newBookBtn" onclick="onAddBook()">Create New Book</button>
+        <table>
+            <thead>
+                <tr>
+                    <th data-trans="thId">Id</th>
+                    <th data-trans="thTitle">Title</th>
+                    <th data-trans="price">Price</th>
+                    <th data-trans="thActions" colspan="3">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="books"></tbody>
+        </table>
+    </section>
+
+    <div class="book-details">
+        <button class="close-modal" onclick="closeBookDetails()">x</button>
+        <div class="details book-name"></div>
+        <div class="details book-price"></div>
+        <div class="details book-img-container"></div>
+        <div class="details rate-section" >
+            <span data-trans="ratingCount">Rating</span>
+            <span class="current-rating"></span>
+        </div>
+        <div class="details rate-book">
+            <button class="btn plus" onclick="onPlus()">+</button>
+            <span class="rateCount"></span>
+            <button class="btn minus" onclick="onMinus()">-</button>
+            <button class="btn save-rating" data-trans="rate" onclick="onRate()">Rate</button>
+        </div>
+    </div>
+
+    <div class="create-book-modal">
+        <button class="close-add-book" onclick="closeAddBookModal()">x</button>
+        <h4 data-trans="enterBookDetails">Enter new book details:</h4>
+       
+        <h5 data-trans="bookName"></h5>
+        <input class="new-book-name" type="text"/>
+        
+        <h5 data-trans="bookPrice"></h5>
+        <input class="new-book-price" type="text"/>
+        
+        <div class="addBookBtnContainer">
+            <button data-trans="addBtn" onclick="onAdd()">Add</button>
+        </div>
+    </div>
+
+    <div class="update-book-modal">
+        <button class="close-update-book" onclick="closeUpdateBookModal()">x</button>
+        <h4 data-trans="newPrice">Enter new price:</h4>
+        <input class="update-book-price" type="text"/>
+        <div class="updateBookBtnContainer">
+            <button data-trans="addBtn" onclick="onUpdate()">Add</button>
+        </div>
+    </div>
+
+
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/book-service.js"></script>
+    <script src="js/services/translation-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>
